@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Our Time</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="glow"></div>
+
+    <div data-reveal style="position:relative;">
+      <span class="sans" style="font-size:clamp(13px,1.4vw,17px);letter-spacing:.42em;text-transform:uppercase;color:var(--ink);">[ Name ]</span>
+      <span class="serif" style="font-style:italic;font-size:clamp(15px,1.6vw,19px);color:var(--accent);margin:0 .55em;">&amp;</span>
+      <span class="sans" style="font-size:clamp(13px,1.4vw,17px);letter-spacing:.42em;text-transform:uppercase;color:var(--ink);">[ Name ]</span>
+    </div>
+
+    <p data-reveal class="sans" style="position:relative;margin:clamp(34px,6vh,64px) 0 clamp(20px,3vh,30px);font-size:clamp(11px,1.1vw,14px);letter-spacing:.46em;text-transform:uppercase;color:var(--accent);transition-delay:.15s;">together for</p>
+
+    <div data-reveal class="timer" style="transition-delay:.3s;">
+      <div class="unit"><span class="num" id="t-years">0</span><span class="lbl">Years</span></div>
+      <div class="unit"><span class="num" id="t-months">00</span><span class="lbl">Months</span></div>
+      <div class="unit"><span class="num" id="t-weeks">00</span><span class="lbl">Weeks</span></div>
+      <div class="unit"><span class="num" id="t-days">00</span><span class="lbl">Days</span></div>
+      <div class="unit"><span class="num dim" id="t-hours">00</span><span class="lbl">Hours</span></div>
+      <div class="unit"><span class="num dim" id="t-mins">00</span><span class="lbl">Minutes</span></div>
+      <div class="unit"><span class="num accent" id="t-secs">00</span><span class="lbl">Seconds</span></div>
+    </div>
+
+    <p data-reveal id="since" class="serif" style="position:relative;margin:clamp(30px,5vh,52px) 0 0;font-style:italic;font-size:clamp(18px,2.2vw,28px);color:rgba(58,51,48,.62);transition-delay:.5s;">since 4 June 2023</p>
+
+    <div class="scrollcue" data-reveal style="transition-delay:1s;">
+      <span class="sans" style="font-size:10px;letter-spacing:.34em;text-transform:uppercase;color:rgba(58,51,48,.45);">scroll</span>
+      <span class="line"></span>
+    </div>
+  </section>
+
+  <!-- ============ INTRO STATEMENT ============ -->
+  <section style="padding:clamp(80px,13vh,170px) 24px;">
+    <div data-reveal style="max-width:920px;margin:0 auto;text-align:center;">
+      <p class="eyebrow" style="margin:0 0 28px;">our story</p>
+      <p class="serif" style="font-style:italic;font-weight:400;font-size:clamp(30px,5vw,62px);line-height:1.12;margin:0;color:var(--ink);text-wrap:balance;">A love measured in seconds, days, and everything in between.</p>
+    </div>
+  </section>
+
+  <!-- ============ FEATURE FULL-BLEED ============ -->
+  <section style="padding:0 0 clamp(60px,9vh,110px);">
+    <div data-reveal class="photo" style="width:100%;height:clamp(360px,68vh,700px);border-radius:0;border-left:0;border-right:0;border-top:1px solid rgba(58,51,48,.12);border-bottom:1px solid rgba(58,51,48,.12);">
+      <span class="tag" style="font-size:12px;letter-spacing:.24em;">photo &middot; 01 — the day it began</span>
+    </div>
+    <p data-reveal class="serif" style="text-align:center;margin:clamp(22px,3vh,34px) auto 0;font-style:italic;font-size:clamp(17px,2vw,24px);color:rgba(58,51,48,.6);">where it all started</p>
+  </section>
+
+  <!-- ============ MAIN GALLERY ============ -->
+  <section style="padding:clamp(50px,8vh,100px) 24px;">
+    <p data-reveal class="eyebrow" style="text-align:center;margin:0 0 clamp(40px,6vh,70px);">moments</p>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:clamp(60px,7.6vw,100px);gap:clamp(10px,1.4vw,18px);grid-auto-flow:dense;max-width:1120px;margin:0 auto;">
+      <div data-reveal class="photo" style="grid-column:span 2;grid-row:span 3;"><span class="tag">photo &middot; 02</span></div>
+      <div data-reveal class="photo" style="grid-column:span 1;grid-row:span 2;"><span class="tag">photo &middot; 03</span></div>
+      <div data-reveal class="photo" style="grid-column:span 1;grid-row:span 1;"><span class="tag">photo &middot; 04</span></div>
+      <div data-reveal class="photo" style="grid-column:span 1;grid-row:span 2;"><span class="tag">photo &middot; 05</span></div>
+      <div data-reveal class="photo" style="grid-column:span 2;grid-row:span 2;"><span class="tag">photo &middot; 06</span></div>
+      <div data-reveal class="photo" style="grid-column:span 1;grid-row:span 1;"><span class="tag">photo &middot; 07</span></div>
+      <div data-reveal class="photo" style="grid-column:span 1;grid-row:span 3;"><span class="tag">photo &middot; 08</span></div>
+      <div data-reveal class="photo" style="grid-column:span 2;grid-row:span 2;"><span class="tag">photo &middot; 09</span></div>
+      <div data-reveal class="photo" style="grid-column:span 1;grid-row:span 2;"><span class="tag">photo &middot; 10</span></div>
+      <div data-reveal class="photo" style="grid-column:span 1;grid-row:span 1;"><span class="tag">photo &middot; 11</span></div>
+      <div data-reveal class="photo" style="grid-column:span 2;grid-row:span 3;"><span class="tag">photo &middot; 12</span></div>
+      <div data-reveal class="photo" style="grid-column:span 1;grid-row:span 2;"><span class="tag">photo &middot; 13</span></div>
+      <div data-reveal class="photo" style="grid-column:span 1;grid-row:span 1;"><span class="tag">photo &middot; 14</span></div>
+      <div data-reveal class="photo" style="grid-column:span 1;grid-row:span 2;"><span class="tag">photo &middot; 15</span></div>
+      <div data-reveal class="photo" style="grid-column:span 2;grid-row:span 2;"><span class="tag">photo &middot; 16</span></div>
+      <div data-reveal class="photo" style="grid-column:span 2;grid-row:span 2;"><span class="tag">photo &middot; 17</span></div>
+    </div>
+  </section>
+
+  <!-- ============ INTERLUDE ============ -->
+  <section style="padding:clamp(60px,11vh,150px) 24px;">
+    <p data-reveal class="serif" style="max-width:760px;margin:0 auto;text-align:center;font-style:italic;font-weight:400;font-size:clamp(26px,4vw,50px);line-height:1.18;color:var(--ink);text-wrap:balance;">It's the in-between moments I keep coming back to.</p>
+  </section>
+
+  <!-- ============ SECOND ROW GALLERY ============ -->
+  <section style="padding:0 24px clamp(50px,8vh,100px);">
+    <p data-reveal class="eyebrow" style="text-align:center;margin:0 0 clamp(34px,5vh,56px);">lately</p>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(10px,1.4vw,18px);max-width:1120px;margin:0 auto;">
+      <div data-reveal class="photo" style="aspect-ratio:3/4;"><span class="tag">photo &middot; 18</span></div>
+      <div data-reveal class="photo" style="aspect-ratio:3/4;transition-delay:.08s;"><span class="tag">photo &middot; 19</span></div>
+      <div data-reveal class="photo" style="aspect-ratio:3/4;transition-delay:.16s;"><span class="tag">photo &middot; 20</span></div>
+      <div data-reveal class="photo" style="aspect-ratio:3/4;transition-delay:.24s;"><span class="tag">photo &middot; 21</span></div>
+    </div>
+  </section>
+
+  <!-- ============ LETTER ============ -->
+  <section style="padding:clamp(70px,12vh,160px) 24px;">
+    <div data-reveal style="display:flex;justify-content:center;margin-bottom:clamp(-28px,-3vh,-22px);position:relative;z-index:2;">
+      <div style="background:#fdfaf4;padding:12px 12px 44px;box-shadow:0 22px 50px -22px rgba(58,51,48,.4);transform:rotate(-3deg);border:1px solid rgba(58,51,48,.06);">
+        <div class="photo" style="width:clamp(150px,20vw,200px);aspect-ratio:4/5;border:0;border-radius:0;"><span class="tag">photo &middot; 24</span></div>
+      </div>
+    </div>
+    <div data-reveal style="max-width:640px;margin:0 auto;background:#f7f1e9;border:1px solid rgba(58,51,48,.1);border-radius:3px;padding:clamp(40px,6vw,72px) clamp(30px,5vw,64px) clamp(36px,5vw,60px);box-shadow:0 34px 80px -34px rgba(58,51,48,.3);transition-delay:.12s;">
+      <p class="eyebrow" style="text-align:center;font-size:12px;letter-spacing:.36em;margin:0 0 clamp(28px,4vh,40px);">a letter to you</p>
+      <p class="serif" style="font-style:italic;font-size:clamp(22px,2.6vw,30px);color:var(--ink);margin:0 0 24px;">My love,</p>
+      <p class="sans" style="font-size:clamp(16px,1.5vw,19px);line-height:1.95;color:#4a423d;margin:0 0 20px;">Write to them here. Tell them about the moment you knew, the small things you never want to forget, the way an ordinary day became something you'd keep. There's no wrong way to say it — only your way.</p>
+      <p class="sans" style="font-size:clamp(16px,1.5vw,19px);line-height:1.95;color:#4a423d;margin:0 0 36px;">Replace this with everything you'd want them to read on a quiet afternoon. Make it as long or as short as it needs to be.</p>
+      <p class="serif" style="text-align:right;font-style:italic;font-size:clamp(19px,2.2vw,26px);color:var(--ink);margin:0;">— [ your name ]</p>
+    </div>
+  </section>
+
+  <!-- ============ CLOSING ============ -->
+  <section style="padding:0 24px clamp(90px,14vh,180px);text-align:center;">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:clamp(12px,1.6vw,20px);max-width:680px;margin:0 auto clamp(50px,8vh,90px);">
+      <div data-reveal class="photo" style="aspect-ratio:4/5;"><span class="tag">photo &middot; 22</span></div>
+      <div data-reveal class="photo" style="aspect-ratio:4/5;transition-delay:.12s;"><span class="tag">photo &middot; 23</span></div>
+    </div>
+    <div data-reveal>
+      <p class="serif" style="font-style:italic;font-size:clamp(28px,4.2vw,54px);line-height:1.1;color:var(--ink);margin:0 0 26px;">…and the timer keeps counting.</p>
+      <span class="sans" style="font-size:clamp(12px,1.3vw,15px);letter-spacing:.42em;text-transform:uppercase;color:rgba(58,51,48,.55);">[ Name ]</span>
+      <span class="serif" style="font-style:italic;font-size:clamp(14px,1.5vw,18px);color:var(--accent);margin:0 .55em;">&amp;</span>
+      <span class="sans" style="font-size:clamp(12px,1.3vw,15px);letter-spacing:.42em;text-transform:uppercase;color:rgba(58,51,48,.55);">[ Name ]</span>
+    </div>
+  </section>
+
+<script src="script.js"></script>
+</body>
+</html>

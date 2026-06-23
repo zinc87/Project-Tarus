@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{background:#f6efe7;}
+  @keyframes ot-breathe{0%,100%{opacity:.45;transform:scale(1)}50%{opacity:.8;transform:scale(1.04)}}
+  @keyframes ot-cue{0%,100%{transform:translateY(0);opacity:.35}50%{transform:translateY(7px);opacity:.85}}
+  [data-reveal][data-shown="1"]{opacity:1!important;transform:none!important;}
+</style>
+</helmet>
+<div ref="{{ rootRef }}" style="background:#f6efe7;color:#3a3330;font-family:'EB Garamond',Georgia,serif;overflow-x:hidden;width:100%;">
+
+  <!-- ============ HERO ============ -->
+  <section style="position:relative;min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:64px 24px;text-align:center;overflow:hidden;">
+    <div style="position:absolute;top:50%;left:50%;width:120vw;height:120vw;max-width:1100px;max-height:1100px;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(216,167,160,.5) 0%,rgba(216,167,160,0) 62%);animation:ot-breathe 9s ease-in-out infinite;pointer-events:none;"></div>
+
+    <div data-reveal style="position:relative;opacity:0;transform:translateY(20px);transition:opacity 1.1s cubic-bezier(.22,.61,.36,1),transform 1.1s cubic-bezier(.22,.61,.36,1);">
+      <span style="font-family:'EB Garamond',serif;font-size:clamp(13px,1.4vw,17px);letter-spacing:.42em;text-transform:uppercase;color:#3a3330;">[ Name ]</span>
+      <span style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(15px,1.6vw,19px);color:var(--accent,#b5654d);margin:0 .55em;">&amp;</span>
+      <span style="font-family:'EB Garamond',serif;font-size:clamp(13px,1.4vw,17px);letter-spacing:.42em;text-transform:uppercase;color:#3a3330;">[ Name ]</span>
+    </div>
+
+    <p data-reveal style="position:relative;margin:clamp(34px,6vh,64px) 0 clamp(20px,3vh,30px);font-family:'EB Garamond',serif;font-size:clamp(11px,1.1vw,14px);letter-spacing:.46em;text-transform:uppercase;color:var(--accent,#b5654d);opacity:0;transform:translateY(20px);transition:opacity 1.1s cubic-bezier(.22,.61,.36,1) .15s,transform 1.1s cubic-bezier(.22,.61,.36,1) .15s;">together for</p>
+
+    <div data-reveal style="position:relative;display:flex;flex-wrap:wrap;align-items:flex-start;justify-content:center;gap:clamp(14px,3.4vw,52px);max-width:1180px;opacity:0;transform:translateY(24px);transition:opacity 1.2s cubic-bezier(.22,.61,.36,1) .3s,transform 1.2s cubic-bezier(.22,.61,.36,1) .3s;">
+      <div style="display:flex;flex-direction:column;align-items:center;">
+        <span ref="{{ yearsRef }}" style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(44px,7.4vw,96px);line-height:.86;color:#3a3330;font-variant-numeric:tabular-nums;">0</span>
+        <span style="font-family:'EB Garamond',serif;font-size:clamp(10px,1vw,13px);letter-spacing:.28em;text-transform:uppercase;color:rgba(58,51,48,.5);margin-top:12px;">Years</span>
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:center;">
+        <span ref="{{ monthsRef }}" style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(44px,7.4vw,96px);line-height:.86;color:#3a3330;font-variant-numeric:tabular-nums;">00</span>
+        <span style="font-family:'EB Garamond',serif;font-size:clamp(10px,1vw,13px);letter-spacing:.28em;text-transform:uppercase;color:rgba(58,51,48,.5);margin-top:12px;">Months</span>
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:center;">
+        <span ref="{{ weeksRef }}" style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(44px,7.4vw,96px);line-height:.86;color:#3a3330;font-variant-numeric:tabular-nums;">00</span>
+        <span style="font-family:'EB Garamond',serif;font-size:clamp(10px,1vw,13px);letter-spacing:.28em;text-transform:uppercase;color:rgba(58,51,48,.5);margin-top:12px;">Weeks</span>
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:center;">
+        <span ref="{{ daysRef }}" style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(44px,7.4vw,96px);line-height:.86;color:#3a3330;font-variant-numeric:tabular-nums;">00</span>
+        <span style="font-family:'EB Garamond',serif;font-size:clamp(10px,1vw,13px);letter-spacing:.28em;text-transform:uppercase;color:rgba(58,51,48,.5);margin-top:12px;">Days</span>
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:center;">
+        <span ref="{{ hoursRef }}" style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(44px,7.4vw,96px);line-height:.86;color:rgba(58,51,48,.78);font-variant-numeric:tabular-nums;">00</span>
+        <span style="font-family:'EB Garamond',serif;font-size:clamp(10px,1vw,13px);letter-spacing:.28em;text-transform:uppercase;color:rgba(58,51,48,.5);margin-top:12px;">Hours</span>
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:center;">
+        <span ref="{{ minsRef }}" style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(44px,7.4vw,96px);line-height:.86;color:rgba(58,51,48,.78);font-variant-numeric:tabular-nums;">00</span>
+        <span style="font-family:'EB Garamond',serif;font-size:clamp(10px,1vw,13px);letter-spacing:.28em;text-transform:uppercase;color:rgba(58,51,48,.5);margin-top:12px;">Minutes</span>
+      </div>
+      <div ref="{{ secsUnitRef }}" style="display:flex;flex-direction:column;align-items:center;">
+        <span ref="{{ secsRef }}" style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(44px,7.4vw,96px);line-height:.86;color:var(--accent,#b5654d);font-variant-numeric:tabular-nums;">00</span>
+        <span style="font-family:'EB Garamond',serif;font-size:clamp(10px,1vw,13px);letter-spacing:.28em;text-transform:uppercase;color:rgba(58,51,48,.5);margin-top:12px;">Seconds</span>
+      </div>
+    </div>
+
+    <p ref="{{ sinceRef }}" data-reveal style="position:relative;margin:clamp(30px,5vh,52px) 0 0;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(18px,2.2vw,28px);color:rgba(58,51,48,.62);opacity:0;transform:translateY(20px);transition:opacity 1.1s cubic-bezier(.22,.61,.36,1) .5s,transform 1.1s cubic-bezier(.22,.61,.36,1) .5s;">since 4 June 2023</p>
+
+    <div data-reveal style="position:absolute;bottom:30px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:10px;opacity:0;transition:opacity 1.1s ease 1s;">
+      <span style="font-family:'EB Garamond',serif;font-size:10px;letter-spacing:.34em;text-transform:uppercase;color:rgba(58,51,48,.45);">scroll</span>
+      <span style="width:1px;height:40px;background:linear-gradient(rgba(58,51,48,.45),rgba(58,51,48,0));animation:ot-cue 2.4s ease-in-out infinite;"></span>
+    </div>
+  </section>
+
+  <!-- ============ INTRO STATEMENT ============ -->
+  <section style="padding:clamp(80px,13vh,170px) 24px;">
+    <div data-reveal style="max-width:920px;margin:0 auto;text-align:center;opacity:0;transform:translateY(28px);transition:opacity 1.1s cubic-bezier(.22,.61,.36,1),transform 1.1s cubic-bezier(.22,.61,.36,1);">
+      <p style="font-family:'EB Garamond',serif;font-size:13px;letter-spacing:.34em;text-transform:uppercase;color:var(--accent,#b5654d);margin:0 0 28px;">our story</p>
+      <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:400;font-size:clamp(30px,5vw,62px);line-height:1.12;margin:0;color:#3a3330;text-wrap:balance;">A love measured in seconds, days, and everything in between.</p>
+    </div>
+  </section>
+
+  <!-- ============ FEATURE FULL-BLEED ============ -->
+  <section style="padding:0 0 clamp(60px,9vh,110px);">
+    <div data-reveal style="width:100%;height:clamp(360px,68vh,700px);position:relative;border-top:1px solid rgba(58,51,48,.12);border-bottom:1px solid rgba(58,51,48,.12);background:repeating-linear-gradient(135deg,#efe6da 0,#efe6da 13px,#e8dccb 13px,#e8dccb 26px);display:flex;align-items:center;justify-content:center;opacity:0;transform:translateY(30px);transition:opacity 1.2s cubic-bezier(.22,.61,.36,1),transform 1.2s cubic-bezier(.22,.61,.36,1);">
+      <span style="font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12px;letter-spacing:.24em;color:rgba(58,51,48,.42);text-transform:uppercase;">photo · 01 — the day it began</span>
+    </div>
+    <p data-reveal style="text-align:center;margin:clamp(22px,3vh,34px) auto 0;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(17px,2vw,24px);color:rgba(58,51,48,.6);opacity:0;transform:translateY(20px);transition:opacity 1.1s cubic-bezier(.22,.61,.36,1),transform 1.1s cubic-bezier(.22,.61,.36,1);">where it all started</p>
+  </section>
+
+  <!-- ============ MAIN GALLERY ============ -->
+  <section style="padding:clamp(50px,8vh,100px) 24px;">
+    <p data-reveal style="text-align:center;font-family:'EB Garamond',serif;font-size:13px;letter-spacing:.34em;text-transform:uppercase;color:var(--accent,#b5654d);margin:0 0 clamp(40px,6vh,70px);opacity:0;transform:translateY(20px);transition:opacity 1s cubic-bezier(.22,.61,.36,1),transform 1s cubic-bezier(.22,.61,.36,1);">moments</p>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:clamp(60px,7.6vw,100px);gap:clamp(10px,1.4vw,18px);grid-auto-flow:dense;max-width:1120px;margin:0 auto;">
+      <div data-reveal style="grid-column:span 2;grid-row:span 3;position:relative;border:1px solid rgba(58,51,48,.14);border-radius:2px;background:repeating-linear-gradient(135deg,#efe6da 0,#efe6da 11px,#e8dccb 11px,#e8dccb 22px);display:flex;align-items:center;justify-content:center;opacity:0;transform:translateY(28px);transition:opacity 1s cubic-bezier(.22,.61,.36,1),transform 1s cubic-bezier(.22,.61,.36,1);"><span style="font-family:ui-monospace,Menlo,Consolas,monospace;font-size:10px;letter-spacing:.2em;color:rgba(58,51,48,.4);text-transform:uppercase;">photo · 02</span></div>
+      <div data-reveal style="grid-column:span 1;grid-row:span 2;position:relative;border:1px solid rgba(58,51,48,.14);border-radius:2px;background:repeating-linear-gradient(135deg,#efe6da 0,#efe6da 11px,#e8dccb 11px,#e8dccb 22px);display:flex;align-items:center;justify-content:center;opacity:0;transform:translateY(28px);transition:opacity 1s cubic-bezier(.22,.61,.36,1) .05s,transform 1s cubic-bezier(.22,.61,.36,1) .05s;"><span style="font-family:ui-monospace,Menlo,Consolas,monospace;font-size:10px;letter-spacing:.2em;color:rgba(58,51,48,.4);text-transform:uppercase;">photo · 03</span></div>
+      <div data-reveal style="grid-column:span 1;grid-row:span 1;position:relative;border:1px solid rgba(58,51,48,.14);border-radius:2px;background:repeating-linear-gradient(135deg,#efe6da 0,#efe6da 11px,#e8dccb 11px,#e8dccb 22px);display:flex;align-items:center;justify-content:center;opacity:0;transform:translateY(28px);transition:opacity 1s cubic-bezier(.22,.61,.36,1) .1s,transform 1s cubic-bezier(.22,.61,.36,1) .1s;"><span style="font-family:ui-monospace,Menlo,Consolas,monospace;font-size:10px;letter-spacing:.2em;color:rgba(58,51,48,.4);text-transform:uppercase;">photo · 04</span></div>
+      <div data-reveal style="grid-column:span 1;grid-row:span 2;position:relative;border:1px solid rgba(58,51,48,.14);border-radius:2px;background:repeating-linear-gradient(135deg,#efe6da 0,#efe6da 11px,#e8dccb 11px,#e8dccb 22px);display:flex;align-items:center;justify-content:center;opacity:0;transform:translateY(28px);transition:opacity 1s cubic-bezier(.22,.61,.36,1) .05s,transform 1s cubic-bezier(.22,.61,.36,1) .05s;"><span style="font-family:ui-monospace,Menlo,Consolas,monospace;font-size:10px;letter-spacing:.2em;color:rgba(58,51,48,.4);text-transform:uppercase;">photo · 05</span></div>
+      <div data-reveal style="grid-column:span 2;grid-row:span 2;position:relative;border:1px solid rgba(58,51,48,.14);border-radius:2px;background:repeating-linear-gradient(135deg,#efe6da 0,#efe6da 11px,#e8dccb 11px,#e8dccb 22px);display:flex;align-items:center;justify-content:center;opacity:0;transform:translateY(28px);transition:opacity 1s cubic-bezier(.22,.61,.36,1) .1s,transform 1s cubic-bezier(.22,.61,.36,1) .1s;"><span style="font-family:ui-monospace,Menlo,Consolas,monospace;font-size:10px;letter-spacing:.2em;color:rgba(58,51,48,.4);text-transform:uppercase;">photo · 06</span></div>
+      <div data-reveal style="grid-column:span 1;grid-row:span 1;position:relative;border:1px solid rgba(58,51,48,.14);border-radius:2px;background:repeating-linear-gradient(135deg,#efe6da 0,#efe6da 11px,#e8dccb 11px,#e8dccb 22px);display:flex;align-items:center;justify-content:center;opacity:0;transform:translateY(28px);transition:opacity 1s cubic-bezier(.22,.61,.36,1),transform 1s cubic-bezier(.22,.61,.36,1);"><span style="font-family:ui-monospace,Menlo,Consolas,monospace;font-size:10px;letter-spacing:.2em;color:rgba(58,51,48,.4);text-transform:uppercase;">photo · 07</span></div>
+      <div data-reveal style="grid-column:span 1;grid-row:span 3;position:relative;border:1px solid rgba(58,51,48,.14);border-radius:2px;background:repeating-linear-gradient(135deg,#efe6da 0,#efe6da 11px,#e8dccb 11px,#e8dccb 22px);display:flex;align-items:center;justify-content:center;opacity:0;transform:translateY(28px);transition:opacity 1s cubic-bezier(.22,.61,.36,1) .05s,transform 1s cubic-bezier(.22,.61,.36,1) .05s;"><span style="font-family:ui-monospace,Menlo,Consolas,monospace;font-size:10px;letter-spacing:.2em;color:rgba(58,51,48,.4);text-transform:uppercase;">photo · 08</span></div>
+      <div data-reveal style="grid-column:span 2;grid-row:span 2;position:relative;border:1px solid rgba(58,51,48,.14);border-radius:2px;background:repeating-linear-gradient(135deg,#efe6da 0,#efe6da 11px,#e8dccb 11px,#e8dccb 22px);display:flex;align-items:center;justify-content:center;opacity:0;transform:translateY(28px);transition:opacity 1s cubic-bezier(.22,.61,.36,1) .1s,transform 1s cubic-bezier(.22,.61,.36,1) .1s;"><span style="font-family:ui-monospace,Menlo,Consolas,monospace;font-size:10px;letter-spacing:.2em;color:rgba(58,51,48,.4);text-transform:uppercase;">photo · 09</span></div>
+      <div data-reveal style="grid-column:span 1;grid-row:span 2;position:relative;border:1px solid rgba(58,51,48,.14);border-radius:2px;background:repeating-linear-gradient(135deg,#efe6da 0,#efe6da 11px,#e8dccb 11px,#e8dccb 22px);display:flex;align-items:center;justify-content:center;opacity:0;transform:translateY(28px);transition:opacity 1s cubic-bezier(.22,.61,.36,1) .05s,transform 1s cubic-bezier(.22,.61,.36,1) .05s;"><span style="font-family:ui-monospace,Menlo,Consolas,monospace;font-size:10px;letter-spacing:.2em;color:rgba(58,51,48,.4);text-transform:uppercase;">photo · 10</span></div>
+      <div data-reveal style="grid-column:span 1;grid-row:span 1;position:relative;border:1px solid rgba(58,51,48,.14);border-radius:2px;background:repeating-linear-gradient(135deg,#efe6da 0,#efe6da 11px,#e8dccb 11px,#e8dccb 22px);display:flex;align-items:center;justify-content:center;opacity:0;transform:translateY(28px);transition:opacity 1s cubic-bezier(.22,.61,.36,1) .1s,transform 1s cubic-bezier(.22,.61,.36,1) .1s;"><span style="font-family:ui-monospace,Menlo,Consolas,monospace;font-size:10px;letter-spacing:.2em;color:rgba(58,51,48,.4);text-transform:uppercase;">photo · 11</span></div>
+      <div data-reveal style="grid-column:span 2;grid-row:span 3;position:relative;border:1px solid rgba(58,51,48,.14);border-radius:2px;background:repeating-linear-gradient(135deg,#efe6da 0,#efe6da 11px,#e8dccb 11px,#e8dccb 22px);display:flex;align-items:center;justify-content:center;opacity:0;transform:translateY(28px);transition:opacity 1s cubic-bezier(.22,.61,.36,1),transform 1s cubic-bezier(.22,.61,.36,1);"><span style="font-family:ui-monospace,Menlo,Consolas,monospace;font-size:10px;letter-spacing:.2em;color:rgba(58,51,48,.4);text-transform:uppercase;">photo · 12</span></div>
+      <div data-reveal style="grid-column:span 1;grid-row:span 2;position:relative;border:1px solid rgba(58,51,48,.14);border-radius:2px;background:repeating-linear-gradient(135deg,#efe6da 0,#efe6da 11px,#e8dccb 11px,#e8dccb 22px);display:flex;align-items:center;justify-content:center;opacity:0;transform:translateY(28px);transition:opacity 1s cubic-bezier(.22,.61,.36,1) .05s,transform 1s cubic-bezier(.22,.61,.36,1) .05s;"><span style="font-family:ui-monospace,Menlo,Consolas,monospace;font-size:10px;letter-spacing:.2em;color:rgba(58,51,48,.4);text-transform:uppercase;">photo · 13</span></div>
+      <div data-reveal style="grid-column:span 1;grid-row:span 1;position:relative;border:1px solid rgba(58,51,48,.14);border-radius:2px;background:repeating-linear-gradient(135deg,#efe6da 0,#efe6da 11px,#e8dccb 11px,#e8dccb 22px);display:flex;align-items:center;justify-content:center;opacity:0;transform:translateY(28px);transition:opacity 1s cubic-bezier(.22,.61,.36,1) .1s,transform 1s cubic-bezier(.22,.61,.36,1) .1s;"><span style="font-family:ui-monospace,Menlo,Consolas,monospace;font-size:10px;letter-spacing:.2em;color:rgba(58,51,48,.4);text-transform:uppercase;">photo · 14</span></div>
+      <div data-reveal style="grid-column:span 1;grid-row:span 2;position:relative;border:1px solid rgba(58,51,48,.14);border-radius:2px;background:repeating-linear-gradient(135deg,#efe6da 0,#efe6da 11px,#e8dccb 11px,#e8dccb 22px);display:flex;align-items:center;justify-content:center;opacity:0;transform:translateY(28px);transition:opacity 1s cubic-bezier(.22,.61,.36,1) .05s,transform 1s cubic-bezier(.22,.61,.36,1) .05s;"><span style="font-family:ui-monospace,Menlo,Consolas,monospace;font-size:10px;letter-spacing:.2em;color:rgba(58,51,48,.4);text-transform:uppercase;">photo · 15</span></div>
+      <div data-reveal style="grid-column:span 2;grid-row:span 2;position:relative;border:1px solid rgba(58,51,48,.14);border-radius:2px;background:repeating-linear-gradient(135deg,#efe6da 0,#efe6da 11px,#e8dccb 11px,#e8dccb 22px);display:flex;align-items:center;justify-content:center;opacity:0;transform:translateY(28px);transition:opacity 1s cubic-bezier(.22,.61,.36,1) .1s,transform 1s cubic-bezier(.22,.61,.36,1) .1s;"><span style="font-family:ui-monospace,Menlo,Consolas,monospace;font-size:10px;letter-spacing:.2em;color:rgba(58,51,48,.4);text-transform:uppercase;">photo · 16</span></div>
+      <div data-reveal style="grid-column:span 2;grid-row:span 2;position:relative;border:1px solid rgba(58,51,48,.14);border-radius:2px;background:repeating-linear-gradient(135deg,#efe6da 0,#efe6da 11px,#e8dccb 11px,#e8dccb 22px);display:flex;align-items:center;justify-content:center;opacity:0;transform:translateY(28px);transition:opacity 1s cubic-bezier(.22,.61,.36,1),transform 1s cubic-bezier(.22,.61,.36,1);"><span style="font-family:ui-monospace,Menlo,Consolas,monospace;font-size:10px;letter-spacing:.2em;color:rgba(58,51,48,.4);text-transform:uppercase;">photo · 17</span></div>
+    </div>
+  </section>
+
+  <!-- ============ INTERLUDE ============ -->
+  <section style="padding:clamp(60px,11vh,150px) 24px;">
+    <p data-reveal style="max-width:760px;margin:0 auto;text-align:center;font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:400;font-size:clamp(26px,4vw,50px);line-height:1.18;color:#3a3330;opacity:0;transform:translateY(28px);transition:opacity 1.1s cubic-bezier(.22,.61,.36,1),transform 1.1s cubic-bezier(.22,.61,.36,1);text-wrap:balance;">It’s the in-between moments I keep coming back to.</p>
+  </section>
+
+  <!-- ============ SECOND ROW GALLERY ============ -->
+  <section style="padding:0 24px clamp(50px,8vh,100px);">
+    <p data-reveal style="text-align:center;font-family:'EB Garamond',serif;font-size:13px;letter-spacing:.34em;text-transform:uppercase;color:var(--accent,#b5654d);margin:0 0 clamp(34px,5vh,56px);opacity:0;transform:translateY(20px);transition:opacity 1s cubic-bezier(.22,.61,.36,1),transform 1s cubic-bezier(.22,.61,.36,1);">lately</p>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(10px,1.4vw,18px);max-width:1120px;margin:0 auto;">
+      <div data-reveal style="aspect-ratio:3/4;border:1px solid rgba(58,51,48,.14);border-radius:2px;background:repeating-linear-gradient(135deg,#efe6da 0,#efe6da 11px,#e8dccb 11px,#e8dccb 22px);display:flex;align-items:center;justify-content:center;opacity:0;transform:translateY(28px);transition:opacity 1s cubic-bezier(.22,.61,.36,1),transform 1s cubic-bezier(.22,.61,.36,1);"><span style="font-family:ui-monospace,Menlo,Consolas,monospace;font-size:10px;letter-spacing:.2em;color:rgba(58,51,48,.4);text-transform:uppercase;">photo · 18</span></div>
+      <div data-reveal style="aspect-ratio:3/4;border:1px solid rgba(58,51,48,.14);border-radius:2px;background:repeating-linear-gradient(135deg,#efe6da 0,#efe6da 11px,#e8dccb 11px,#e8dccb 22px);display:flex;align-items:center;justify-content:center;opacity:0;transform:translateY(28px);transition:opacity 1s cubic-bezier(.22,.61,.36,1) .08s,transform 1s cubic-bezier(.22,.61,.36,1) .08s;"><span style="font-family:ui-monospace,Menlo,Consolas,monospace;font-size:10px;letter-spacing:.2em;color:rgba(58,51,48,.4);text-transform:uppercase;">photo · 19</span></div>
+      <div data-reveal style="aspect-ratio:3/4;border:1px solid rgba(58,51,48,.14);border-radius:2px;background:repeating-linear-gradient(135deg,#efe6da 0,#efe6da 11px,#e8dccb 11px,#e8dccb 22px);display:flex;align-items:center;justify-content:center;opacity:0;transform:translateY(28px);transition:opacity 1s cubic-bezier(.22,.61,.36,1) .16s,transform 1s cubic-bezier(.22,.61,.36,1) .16s;"><span style="font-family:ui-monospace,Menlo,Consolas,monospace;font-size:10px;letter-spacing:.2em;color:rgba(58,51,48,.4);text-transform:uppercase;">photo · 20</span></div>
+      <div data-reveal style="aspect-ratio:3/4;border:1px solid rgba(58,51,48,.14);border-radius:2px;background:repeating-linear-gradient(135deg,#efe6da 0,#efe6da 11px,#e8dccb 11px,#e8dccb 22px);display:flex;align-items:center;justify-content:center;opacity:0;transform:translateY(28px);transition:opacity 1s cubic-bezier(.22,.61,.36,1) .24s,transform 1s cubic-bezier(.22,.61,.36,1) .24s;"><span style="font-family:ui-monospace,Menlo,Consolas,monospace;font-size:10px;letter-spacing:.2em;color:rgba(58,51,48,.4);text-transform:uppercase;">photo · 21</span></div>
+    </div>
+  </section>
+
+  <!-- ============ LETTER ============ -->
+  <section style="padding:clamp(70px,12vh,160px) 24px;">
+    <div data-reveal style="display:flex;justify-content:center;margin-bottom:clamp(-28px,-3vh,-22px);position:relative;z-index:2;opacity:0;transform:translateY(28px);transition:opacity 1.1s cubic-bezier(.22,.61,.36,1),transform 1.1s cubic-bezier(.22,.61,.36,1);">
+      <div style="background:#fdfaf4;padding:12px 12px 44px;box-shadow:0 22px 50px -22px rgba(58,51,48,.4);transform:rotate(-3deg);border:1px solid rgba(58,51,48,.06);">
+        <div style="width:clamp(150px,20vw,200px);aspect-ratio:4/5;background:repeating-linear-gradient(135deg,#efe6da 0,#efe6da 11px,#e8dccb 11px,#e8dccb 22px);display:flex;align-items:center;justify-content:center;"><span style="font-family:ui-monospace,Menlo,Consolas,monospace;font-size:10px;letter-spacing:.2em;color:rgba(58,51,48,.4);text-transform:uppercase;">photo · 24</span></div>
+      </div>
+    </div>
+    <div data-reveal style="max-width:640px;margin:0 auto;background:#f7f1e9;border:1px solid rgba(58,51,48,.1);border-radius:3px;padding:clamp(40px,6vw,72px) clamp(30px,5vw,64px) clamp(36px,5vw,60px);box-shadow:0 34px 80px -34px rgba(58,51,48,.3);opacity:0;transform:translateY(34px);transition:opacity 1.2s cubic-bezier(.22,.61,.36,1) .12s,transform 1.2s cubic-bezier(.22,.61,.36,1) .12s;">
+      <p style="text-align:center;font-family:'EB Garamond',serif;font-size:12px;letter-spacing:.36em;text-transform:uppercase;color:var(--accent,#b5654d);margin:0 0 clamp(28px,4vh,40px);">a letter to you</p>
+      <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(22px,2.6vw,30px);color:#3a3330;margin:0 0 24px;">My love,</p>
+      <p style="font-family:'EB Garamond',serif;font-size:clamp(16px,1.5vw,19px);line-height:1.95;color:#4a423d;margin:0 0 20px;">Write to them here. Tell them about the moment you knew, the small things you never want to forget, the way an ordinary day became something you’d keep. There’s no wrong way to say it — only your way.</p>
+      <p style="font-family:'EB Garamond',serif;font-size:clamp(16px,1.5vw,19px);line-height:1.95;color:#4a423d;margin:0 0 36px;">Replace this with everything you’d want them to read on a quiet afternoon. Make it as long or as short as it needs to be.</p>
+      <p style="text-align:right;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(19px,2.2vw,26px);color:#3a3330;margin:0;">— [ your name ]</p>
+    </div>
+  </section>
+
+  <!-- ============ CLOSING ============ -->
+  <section style="padding:0 24px clamp(90px,14vh,180px);text-align:center;">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:clamp(12px,1.6vw,20px);max-width:680px;margin:0 auto clamp(50px,8vh,90px);">
+      <div data-reveal style="aspect-ratio:4/5;border:1px solid rgba(58,51,48,.14);border-radius:2px;background:repeating-linear-gradient(135deg,#efe6da 0,#efe6da 11px,#e8dccb 11px,#e8dccb 22px);display:flex;align-items:center;justify-content:center;opacity:0;transform:translateY(28px);transition:opacity 1.1s cubic-bezier(.22,.61,.36,1),transform 1.1s cubic-bezier(.22,.61,.36,1);"><span style="font-family:ui-monospace,Menlo,Consolas,monospace;font-size:10px;letter-spacing:.2em;color:rgba(58,51,48,.4);text-transform:uppercase;">photo · 22</span></div>
+      <div data-reveal style="aspect-ratio:4/5;border:1px solid rgba(58,51,48,.14);border-radius:2px;background:repeating-linear-gradient(135deg,#efe6da 0,#efe6da 11px,#e8dccb 11px,#e8dccb 22px);display:flex;align-items:center;justify-content:center;opacity:0;transform:translateY(28px);transition:opacity 1.1s cubic-bezier(.22,.61,.36,1) .12s,transform 1.1s cubic-bezier(.22,.61,.36,1) .12s;"><span style="font-family:ui-monospace,Menlo,Consolas,monospace;font-size:10px;letter-spacing:.2em;color:rgba(58,51,48,.4);text-transform:uppercase;">photo · 23</span></div>
+    </div>
+    <div data-reveal style="opacity:0;transform:translateY(24px);transition:opacity 1.1s cubic-bezier(.22,.61,.36,1),transform 1.1s cubic-bezier(.22,.61,.36,1);">
+      <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(28px,4.2vw,54px);line-height:1.1;color:#3a3330;margin:0 0 26px;">…and the timer keeps counting.</p>
+      <span style="font-family:'EB Garamond',serif;font-size:clamp(12px,1.3vw,15px);letter-spacing:.42em;text-transform:uppercase;color:rgba(58,51,48,.55);">[ Name ]</span>
+      <span style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(14px,1.5vw,18px);color:var(--accent,#b5654d);margin:0 .55em;">&amp;</span>
+      <span style="font-family:'EB Garamond',serif;font-size:clamp(12px,1.3vw,15px);letter-spacing:.42em;text-transform:uppercase;color:rgba(58,51,48,.55);">[ Name ]</span>
+    </div>
+  </section>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{
+  &quot;startDate&quot;: {&quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;2023-06-04&quot;, &quot;tsType&quot;: &quot;string&quot;},
+  &quot;accent&quot;: {&quot;editor&quot;: &quot;color&quot;, &quot;default&quot;: &quot;#b5654d&quot;, &quot;tsType&quot;: &quot;string&quot;},
+  &quot;showSeconds&quot;: {&quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: true, &quot;tsType&quot;: &quot;boolean&quot;}
+}">
+class Component extends DCLogic {
+  constructor(props){
+    super(props);
+    this.rootRef = React.createRef();
+    this.yearsRef = React.createRef();
+    this.monthsRef = React.createRef();
+    this.weeksRef = React.createRef();
+    this.daysRef = React.createRef();
+    this.hoursRef = React.createRef();
+    this.minsRef = React.createRef();
+    this.secsRef = React.createRef();
+    this.secsUnitRef = React.createRef();
+    this.sinceRef = React.createRef();
+  }
+  parseStart(){
+    const raw = String(this.props.startDate || '2023-06-04').trim();
+    let d = new Date(raw);
+    if (isNaN(d.getTime())) {
+      const m = raw.match(/(\d{4})\D+(\d{1,2})\D+(\d{1,2})(?:\D+(\d{1,2})\D+(\d{1,2}))?/);
+      if (m) d = new Date(+m[1], +m[2]-1, +m[3], m[4]?+m[4]:0, m[5]?+m[5]:0, 0);
+      else d = new Date(2023, 5, 4, 0, 0, 0);
+    }
+    return d;
+  }
+  calc(from, now){
+    let years = now.getFullYear() - from.getFullYear();
+    let months = now.getMonth() - from.getMonth();
+    let days = now.getDate() - from.getDate();
+    let hours = now.getHours() - from.getHours();
+    let mins = now.getMinutes() - from.getMinutes();
+    let secs = now.getSeconds() - from.getSeconds();
+    if (secs < 0){ secs += 60; mins--; }
+    if (mins < 0){ mins += 60; hours--; }
+    if (hours < 0){ hours += 24; days--; }
+    if (days < 0){ const pm = new Date(now.getFullYear(), now.getMonth(), 0).getDate(); days += pm; months--; }
+    if (months < 0){ months += 12; years--; }
+    const weeks = Math.floor(days / 7); days = days % 7;
+    return { years, months, weeks, days, hours, mins, secs };
+  }
+  pad(n){ return String(n).padStart(2, '0'); }
+  tick(){
+    if (!this.start) return;
+    const v = this.calc(this.start, new Date());
+    const set = (r, val) => { if (r && r.current) r.current.textContent = val; };
+    set(this.yearsRef, String(v.years));
+    set(this.monthsRef, this.pad(v.months));
+    set(this.weeksRef, this.pad(v.weeks));
+    set(this.daysRef, this.pad(v.days));
+    set(this.hoursRef, this.pad(v.hours));
+    set(this.minsRef, this.pad(v.mins));
+    set(this.secsRef, this.pad(v.secs));
+  }
+  applyProps(){
+    this.start = this.parseStart();
+    const accent = this.props.accent || '#b5654d';
+    if (this.rootRef.current) this.rootRef.current.style.setProperty('--accent', accent);
+    const show = this.props.showSeconds !== false;
+    if (this.secsUnitRef.current) this.secsUnitRef.current.style.display = show ? 'flex' : 'none';
+    if (this.sinceRef.current){
+      const months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+      const d = this.start;
+      this.sinceRef.current.textContent = 'since ' + d.getDate() + ' ' + months[d.getMonth()] + ' ' + d.getFullYear();
+    }
+    this.tick();
+  }
+  show(el){ el.setAttribute('data-shown', '1'); }
+  setupReveal(){
+    const root = this.rootRef.current; if (!root) return;
+    const els = root.querySelectorAll('[data-reveal]');
+    if (!('IntersectionObserver' in window)){ els.forEach(e => this.show(e)); return; }
+    const io = new IntersectionObserver((ents) => {
+      ents.forEach(e => { if (e.isIntersecting){ this.show(e.target); io.unobserve(e.target); } });
+    }, { threshold: 0.1, rootMargin: '0px 0px -6% 0px' });
+    els.forEach(e => io.observe(e));
+    this.io = io;
+    this.safety = setTimeout(() => {
+      els.forEach(e => { if (getComputedStyle(e).opacity !== '1') this.show(e); });
+    }, 7000);
+  }
+  componentDidMount(){
+    this.applyProps();
+    this.timer = setInterval(() => this.tick(), 1000);
+    requestAnimationFrame(() => this.setupReveal());
+  }
+  componentDidUpdate(){ this.applyProps(); }
+  componentWillUnmount(){ clearInterval(this.timer); if (this.io) this.io.disconnect(); clearTimeout(this.safety); }
+  renderVals(){
+    return {
+      rootRef: this.rootRef,
+      yearsRef: this.yearsRef, monthsRef: this.monthsRef, weeksRef: this.weeksRef,
+      daysRef: this.daysRef, hoursRef: this.hoursRef, minsRef: this.minsRef,
+      secsRef: this.secsRef, secsUnitRef: this.secsUnitRef, sinceRef: this.sinceRef
+    };
+  }
+}
+</script>
+</body>
+</html>

@@ -81,7 +81,11 @@ var SHOW_SECONDS = true;   // set to false to hide the seconds unit
   }
 
   // 1) reveal anything already on screen at load (so above-the-fold never stays blank)
-  reveals.forEach(function (e) { if (inView(e)) reveal(e); });
+  requestAnimationFrame(function () {
+  requestAnimationFrame(function () {
+    reveals.forEach(function (e) { if (inView(e)) reveal(e); });
+    });
+  });
 
   // 2) observe the rest as they scroll in
   if ('IntersectionObserver' in window) {
